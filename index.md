@@ -86,99 +86,21 @@ Read correct lesson meta from esciencecenter-digital-skills/workshop-metadata
 {% capture lesson_meta %}https://raw.githubusercontent.com/esciencecenter-digital-skills/workshop-metadata/main/{{info.curriculum}}{% endcapture %}
 {% endif %}
 
-{% comment %}
-Check DC curriculum
-{% endcomment %}
-
-{% if info.carpentry == "dc" %}
-{% unless info.curriculum == "dc-astronomy" or info.curriculum == "dc-ecology" or info.curriculum == "dc-genomics" or info.curriculum == "dc-socsci" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_data/data.csv</code> file (current value in <code>_data/data.csv</code>: "<strong>{{ info.curriculum }}</strong>", possible values: <code>dc-astronomy</code>, <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-{% comment %}
-Check SWC curriculum
-{% endcomment %}
-
-{% if info.carpentry == "swc" %}
-{% unless info.curriculum == "swc-inflammation" or info.curriculum == "swc-gapminder" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_data/data.csv</code> file (current value in <code>_data/data.csv</code>: "<strong>{{ info.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-Check DS curriculum
-{% endcomment %}
-
-{% if info.carpentry == "ds" %}
-{% unless info.curriculum == "ds-cr" or info.curriculum == "ds-docker" or info.curriculum == "ds-dl-intro" or info.curriculum == "ds-gpu" or info.curriculum == "ds-parallel" or info.curriculum == "ds-rpackaging" or info.curriculum == "ds-geospatial"%}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Digital Skills curriculum but you haven't specified the curriculum type in the <code>_data/data.csv</code> file (current value in <code>_data/data.csv</code>: "<strong>{{ info.curriculum }}</strong>", possible values: <code>ds-cr</code>, <code>ds-docker</code>, <code>ds-dl-intro</code>, <code>ds-gpu</code>, <code>ds-parallel</code> or <code>ds-rpackaging</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
 
 <h2 id="general">General Information</h2>
 
-{% comment %}
-INTRODUCTION
+The eScience Center offers a range of free workshops and training courses, open to all researchers affiliated with Dutch research organizations. 
+We organize workshops covering digital skills needed to put reproducible research into practice. 
+These include online collaboration, reproducible code and good programming practices. 
+We also offer more advanced workshops such as GPU Programming, Parallel Programming and Deep Learning.
 
-Edit the general explanatory paragraph below if you want to change
-the pitch.
-{% endcomment %}
-{% if info.carpentry == "swc" %}
-{% include swc/intro.html %}
-{% elsif info.carpentry == "dc" %}
-{% include dc/intro.html %}
-{% elsif info.carpentry == "lc" %}
-{% include lc/intro.html %}
-{% elsif info.carpentry == "ds" %}
-{% include ds/intro.md %}
-{% remote_include {{lesson_meta}}/description.md %}
-{% endif %}
+This workshop aims to teach engineers and support staff how to conform to the FAIR principles for research software.
+In other words, how to make your research software more Findable, Accessible, Interoperable, and Reusable. 
+In addition, it teaches how to write good Software Management Plans (SMP). 
 
-{% comment %}
-AUDIENCE
-
-Explain who your audience is.  (In particular, tell readers if the
-workshop is only open to people from a particular institution.
-{% endcomment %}
-{% if info.carpentry == "swc" %}
-{% include swc/who.html %}
-{% elsif info.carpentry == "dc" %}
-{% include dc/who.html %}
-{% elsif info.carpentry == "lc" %}
-{% include lc/who.html %}
-{% elsif info.carpentry == "ds" %}
-<div style="display: flex"><div>
-     <strong>Who:&nbsp;</strong>
-     </div>
-     <div markdown=1>{% remote_include {{lesson_meta}}/who.md %}</div></div>
-{% endif %}
+Furthermore, we teach good practices for research software development. These include collaborative version control,
+code style, testing and continuous integration, software architecture, and assessment of software for external or internal usage.
+These skills are important, because by adhering to them you ensure that the software is indeed Findable, Accessible, Interoperable and Reusable.
 
 {% comment %}
 LOCATION
@@ -406,29 +328,83 @@ of code below the Schedule `<h2>` header below with
 `{% include custom-schedule.html %}`.
 {% endcomment %}
 
-{% if info.carpentry == "ds" %}
 <h2 id="syllabus">Syllabus</h2>
-{% remote_include {{lesson_meta}}/syllabus.md %}
-{% endif %}
+FAIR principles for research software
+* Introduction to FAIR principles for Research Software
+* Use a publicly accessible repository with version control
+* Add a License
+* Register your code in a community registry
+* Enable citation of the software (We will also cover making software citable in the hands-on part.)
+* Use a software quality checklist 
+
+Software Management Plans
+* What is a Software Management Plan?
+* What are the benefits of using a Software Management Plan?
+* What are core requirements for Developing a Software Management Plan?
+* Interactive Software Management Plan writing exercise
+
+Good practices for Research Software Development
+* Collaborative version control: working together through pull requests and perr review
+* Code style: Python code style conventions + linting
+* Software architecture
+* Assessment of external software usage or integration
 
 <h2 id="schedule">Schedule</h2>
+<div class="row">
+  <div class="col-md-6">
+    <h3>Day 1 support staff + engineers </h3>
+    <table class="table table-striped">
+      <tr> <td>09:30</td> <td>Welcome and icebreaker </td> </tr>
+      <tr> <td>09:45</td>  <td>FAIR software </td> </tr>
+      <tr> <td>10:30</td>  <td>Break</td></tr>
+      <tr> <td>10:40</td>  <td>FAIR software </td> </tr>
+      <tr> <td>11:30</td>  <td>Break</td></tr>
+      <tr> <td>11:40</td>  <td>FAIR software</td> </tr>
+      <tr> <td>12:30</td>  <td>Lunch Break</td></tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <h3>Day 1 engineers only</h3>
+    <table class="table table-striped">
+      <tr> <td>13:30</td>  <td>Collaborative version control</td> </tr>
+      <tr> <td>14:30</td>  <td>Break</td></tr>
+      <tr> <td>14:40</td>  <td>Collaborative version control</td> </tr>
+      <tr> <td>15:00</td>  <td>Code style</td> </tr>
+      <tr> <td>15:30</td>  <td>Break</td></tr>
+      <tr> <td>15:40</td>  <td>Code style</td> </tr>
+      <tr> <td>16:15</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>16:30</td>  <td>END</td> </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <h3>Day 2 support staff + engineers</h3>
+    <table class="table table-striped">
+      <tr> <td>09:30</td> <td>Welcome and icebreaker </td> </tr>
+      <tr> <td>09:45</td>  <td>Software Management Plans </td> </tr>
+      <tr> <td>10:30</td>  <td>Break</td></tr>
+      <tr> <td>10:40</td>  <td>Software Management Plans </td> </tr>
+      <tr> <td>11:00</td>  <td>Q&A SMP + FAIR software </td> </tr>
+      <tr> <td>11:30</td>  <td>Break</td></tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <h3>Day 2 engineers only</h3>
+    <table class="table table-striped">
+      <tr> <td>11:40</td>  <td>Software architecture</td> </tr>
+      <tr> <td>12:30</td>  <td>Lunch Break</td></tr>
+      <tr> <td>13:30</td>  <td>Testing and continuous integration</td> </tr>
+      <tr> <td>14:30</td>  <td>Break</td></tr>
+      <tr> <td>14:40</td>  <td>Testing and continuous integration</td> </tr>
+      <tr> <td>15:30</td>  <td>Break</td></tr>
+      <tr> <td>15:40</td>  <td>Assesment of external software usage or integration</td> </tr>
+      <tr> <td>16:15</td>  <td>Wrap-up + Q&A</td> </tr>
+      <tr> <td>16:30</td>  <td>END</td> </tr>
+    </table>
+  </div>
+</div>
 
-{% if info.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif info.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif info.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% elsif info.carpentry == "ds" %}
-{% remote_include {{lesson_meta}}/schedule.md %}
-{% elsif info.carpentry == "pilot" %}
-The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. If you would like to know the timing of these breaks in advance, please [contact the workshop organisers](#contact). For a list of lesson sections and estimated timings, [visit the lesson homepage]({{ site.lesson_site }}).
-{% comment %}
-Edit/replace the text above if you want to include a schedule table.
-See the contents of the _includes/custom-schedule.html file for an example of
-how one of these schedule tables is constructed.
-{% endcomment %}
-{% endif %}
+<p><b>The schedule is subject to change! All times in the schedule are in the CET timezone.</b></p>
+
 
 <hr/>
 
@@ -467,49 +443,16 @@ please preview your site before committing, and make sure to run
   that may be useful on the
   <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
-
 {% comment %}
 These are the installation instructions for the tools used
 during the workshop.
 {% endcomment %}
 
 <h3 id="software-setup">Software setup</h3>
-
-{% if info.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif info.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif info.carpentry == "lc" %}
-{% include lc/setup.html %}
-{% elsif info.carpentry == "ds" %}
-{% capture content %}
-{% remote_include {{lesson_meta}}/setup.md %}
-{% endcapture %}
-{% if content contains "/setup.md" %}
-  {% capture setup %}
-  {% remote_include https://raw.githubusercontent.com/{{content | strip}} %}
-  {% endcapture %}
-  {{ setup | split: "---" | last}}
-{% else %}
-  {{ content }}
-{% endif %}
-{% elsif info.carpentry == "pilot" %}
-Please check the "Setup" page of
-[the lesson site]({{ site.lesson_site }}) for instructions to follow
-to obtain the software and data you will need to follow the lesson.
-{% endif %}
-
-{% comment %}
-For online workshops, the section below provides:
-- installation instructions for the Zoom client
-- recommendations for setting up Learners' workspace so they can follow along
-  the instructions and the videoconferencing
-
-If you do not use Zoom for your online workshop, edit the file
-`_includes/install_instructions/videoconferencing.html`
-to include the relevant installation instrucctions.
-{% endcomment %}
-{% if online != "false" %}
-{% include install_instructions/videoconferencing.html %}
-{% endif %}
-
+<p>To participate in this workshop, you will need to prepare the following (if you haven’t already):</p>
+<ul>
+  <li>Install Shell and Git. Please refer to <a href="https://coderefinery.github.io/installation/shell-and-git/">this page</a> for installation instructions.</li>
+  <li>Create a GitLab account. Please refer to <a href="https://gitlab.com/users/sign_up">this page</a> for instructions.</li>
+  <li>Set up an SSH connection to GitLab. First <a href="https://docs.gitlab.com/ee/user/ssh.html#see-if-you-have-an-existing-ssh-key-pair">check if you have an ssh key</a>. Then create an SSH key pair if you don't have one, please refer to <a href="https://docs.gitlab.com/ee/user/ssh.html#generate-an-ssh-key-pair">this page</a> for instructions. Then add the SSH key to your GitLab account following <a href="https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account">these instructions</a></li>
+  <li>If you already work with Python and virtual environments you can create a virtual environment for this workshop. Otherwise, please refer to <a href="https://carpentries-incubator.github.io/python-intermediate-development/setup.html#python-distribution">this section</a> to setup Python.</li>
+</ul>
