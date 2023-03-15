@@ -344,7 +344,7 @@ Software Management Plans
 * Interactive Software Management Plan writing exercise
 
 Good practices for Research Software Development
-* Collaborative version control: working together through pull requests and perr review
+* Collaborative version control: working together through pull requests and peer review
 * Code style: Python code style conventions + linting
 * Software architecture
 * Assessment of external software usage or integration
@@ -355,11 +355,11 @@ Good practices for Research Software Development
     <h3>Day 1 support staff + engineers </h3>
     <table class="table table-striped">
       <tr> <td>09:30</td> <td>Welcome and icebreaker </td> </tr>
-      <tr> <td>09:45</td>  <td>FAIR software </td> </tr>
+      <tr> <td>09:45</td>  <td>FAIR principles for research software: intro, version control </td> </tr>
       <tr> <td>10:30</td>  <td>Break</td></tr>
-      <tr> <td>10:40</td>  <td>FAIR software </td> </tr>
+      <tr> <td>10:40</td>  <td>FAIR principles for research software: license, registry </td> </tr>
       <tr> <td>11:30</td>  <td>Break</td></tr>
-      <tr> <td>11:40</td>  <td>FAIR software</td> </tr>
+      <tr> <td>11:40</td>  <td>FAIR principles for research software: enable citation, software quality checklist</td> </tr>
       <tr> <td>12:30</td>  <td>Lunch Break</td></tr>
     </table>
   </div>
@@ -403,7 +403,7 @@ Good practices for Research Software Development
   </div>
 </div>
 
-<p><b>The schedule is subject to change! All times in the schedule are in the CET timezone.</b></p>
+<p><b>The schedule is subject to change! All times in the schedule are in the CEST timezone.</b></p>
 
 
 <hr/>
