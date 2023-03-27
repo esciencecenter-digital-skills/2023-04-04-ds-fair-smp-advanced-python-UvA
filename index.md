@@ -452,8 +452,8 @@ during the workshop.
 <p>To participate in this workshop, you will need to prepare the following (if you haven’t already):</p>
 <ul>
   <li>Install Shell and Git. Please refer to <a href="https://coderefinery.github.io/installation/shell-and-git/">this page</a> for installation instructions.</li>
-  <li>Create a GitLab account. Please refer to <a href="https://gitlab.com/users/sign_up">this page</a> for instructions.</li>
-  <li>Set up an SSH connection to GitLab. First <a href="https://docs.gitlab.com/ee/user/ssh.html#see-if-you-have-an-existing-ssh-key-pair">check if you have an ssh key</a>. Then create an SSH key pair if you don't have one, please refer to <a href="https://docs.gitlab.com/ee/user/ssh.html#generate-an-ssh-key-pair">this page</a> for instructions. Then add the SSH key to your GitLab account following <a href="https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account">these instructions</a></li>
+  <li>Create a Bitbucket account if you don't have one yet.</li>
+  <li>Set up an SSH connection to Bitbucket: First, create an SSH key pair if you don't have one, then add the SSH key to your Bitbucket account. You can find detailed steps in <a href="https://support.atlassian.com/bitbucket-cloud/docs/configure-ssh-and-two-step-verification/">these instructions</a> under "Set up personal SSH keys on ..."</li>
   <li>If you already work with Python and virtual environments you can create a virtual environment for this workshop. Otherwise, please refer to <a href="https://carpentries-incubator.github.io/python-intermediate-development/setup.html#python-distribution">this section</a> to setup Python.</li>
   <li>Install PyCharm IDE. Refer to <a href="https://carpentries-incubator.github.io/python-intermediate-development/setup.html#pycharm-ide">this section</a>. It will be easier for you to follow the workshop with PyCharm installed, but if you insist on using a different IDE that has powerful code style checking plugins that is fine as well.</li>
 </ul>
