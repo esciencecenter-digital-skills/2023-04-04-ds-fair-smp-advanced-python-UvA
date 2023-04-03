@@ -366,12 +366,12 @@ Good practices for Research Software Development
   <div class="col-md-6">
     <h3>Day 1 engineers only</h3>
     <table class="table table-striped">
-      <tr> <td>13:30</td>  <td>Collaborative version control</td> </tr>
+      <tr> <td>13:30</td>  <td>Section 1: Setting up Environment for Collaborative Code</td> </tr>
       <tr> <td>14:30</td>  <td>Break</td></tr>
-      <tr> <td>14:40</td>  <td>Collaborative version control</td> </tr>
-      <tr> <td>15:00</td>  <td>Code style</td> </tr>
+      <tr> <td>14:40</td>  <td>Section 1: Setting up Environment for Collaborative Code</td> </tr>
+      <tr> <td>15:00</td>  <td>Section 2: Ensuring Correctness of Software at Scale</td> </tr>
       <tr> <td>15:30</td>  <td>Break</td></tr>
-      <tr> <td>15:40</td>  <td>Code style</td> </tr>
+      <tr> <td>15:40</td>  <td>Section 2: Ensuring Correctness of Software at Scale</td> </tr>
       <tr> <td>16:15</td>  <td>Wrap-up</td> </tr>
       <tr> <td>16:30</td>  <td>END</td> </tr>
     </table>
@@ -390,13 +390,13 @@ Good practices for Research Software Development
   <div class="col-md-6">
     <h3>Day 2 engineers only</h3>
     <table class="table table-striped">
-      <tr> <td>11:40</td>  <td>Software architecture</td> </tr>
+      <tr> <td>11:40</td>  <td>Finish section 2: Ensuring Correctness of Software at Scale</td> </tr>
       <tr> <td>12:30</td>  <td>Lunch Break</td></tr>
-      <tr> <td>13:30</td>  <td>Testing and continuous integration</td> </tr>
+      <tr> <td>13:30</td>  <td>Section 3: Software Development as a Process</td> </tr>
       <tr> <td>14:30</td>  <td>Break</td></tr>
-      <tr> <td>14:40</td>  <td>Testing and continuous integration</td> </tr>
+      <tr> <td>14:40</td>  <td>Section 4: Collaborative Software Development for Reuse</td> </tr>
       <tr> <td>15:30</td>  <td>Break</td></tr>
-      <tr> <td>15:40</td>  <td>Assesment of external software usage or integration</td> </tr>
+      <tr> <td>15:40</td>  <td>Section 5: Managing and Improving Software Over Its Lifetime</td> </tr>
       <tr> <td>16:15</td>  <td>Wrap-up + Q&A</td> </tr>
       <tr> <td>16:30</td>  <td>END</td> </tr>
     </table>
