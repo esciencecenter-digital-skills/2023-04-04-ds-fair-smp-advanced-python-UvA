@@ -401,6 +401,20 @@ Good practices for Research Software Development
       <tr> <td>16:30</td>  <td>END</td> </tr>
     </table>
   </div>
+  <div class="col-md-6">
+    <h3>Day 3 30th of May bonus section engineers only</h3>
+    <table class="table table-striped">
+      <tr> <td>09:30</td> <td>Welcome and recap </td> </tr>
+      <tr> <td>09:45</td>  <td>Collaboration with git and Bitbucket: pull requests, peer review </td> </tr>
+      <tr> <td>10:30</td>  <td>Break</td></tr>
+      <tr> <td>10:40</td>  <td>Collaboration with git and Bitbucket: pull requests, peer review </td> </tr>
+      <tr> <td>10:50</td>  <td>Continuous Deployment </td> </tr>
+      <tr> <td>11:45</td>  <td>Break</td></tr>
+      <tr> <td>11:55</td>  <td>Application to real-world projects </td> </tr>
+      <tr> <td>12:45</td>  <td>Wrap-up</td></tr>
+      <tr> <td>13:00</td>  <td>END</td></tr>
+    </table>
+  </div>
 </div>
 
 <p><b>The schedule is subject to change! All times in the schedule are in the CEST timezone.</b></p>
